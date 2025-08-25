@@ -10,6 +10,7 @@ export const fetchDepartments = async () => {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
+      credentials: 'include',
     });
     if (response.data.success) {
         departments = response.data.departments;
@@ -34,6 +35,7 @@ export const fetchEmployees = async (route, id) => {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
+      credentials: 'include',
     });
     if (response.data.success) {
         employees = response.data.employees;

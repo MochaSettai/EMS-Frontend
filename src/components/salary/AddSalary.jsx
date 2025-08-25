@@ -51,6 +51,7 @@ const AddSalary = () => {
           headers: {
             Authorization: `Bearer ${token}`,
           },
+          credentials: 'include',
         }
       );
       // console.log(response)

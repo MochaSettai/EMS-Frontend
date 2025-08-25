@@ -19,6 +19,7 @@ const LeaveDetails = () => {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
+            credentials: 'include',
           }
         );
         console.log(response.data);
@@ -48,6 +49,7 @@ const LeaveDetails = () => {
           headers: {
             Authorization: `Bearer ${token}`,
           },
+          credentials: 'include',
         }
       );
       // console.log(response)

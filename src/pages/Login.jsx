@@ -19,7 +19,8 @@ const Login = () => {
     try {
       const response = await axios.post(
         `${API_URL}/api/auth/login`,
-        { email, password }
+        { email, password },
+        { credentials: 'include' }
       ); // using 'await' to recieve a response from the server about the post request
 
       // If login successful do the following

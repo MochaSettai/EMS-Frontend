@@ -15,6 +15,7 @@ const AdminSummary = () => {
           headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
+          credentials: 'include',
         })
         if(response.data.success){
           setSummary(response.data)

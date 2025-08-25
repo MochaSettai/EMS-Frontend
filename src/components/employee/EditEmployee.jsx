@@ -34,6 +34,7 @@ const EditEmployee = () => {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
+            credentials: 'include',
           }
         );
         console.log(response.data);
@@ -76,6 +77,7 @@ const EditEmployee = () => {
           headers: {
             Authorization: `Bearer ${token}`,
           },
+          credentials: 'include',
         }
       );
       // console.log(response)

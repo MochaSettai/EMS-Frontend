@@ -26,6 +26,7 @@ const AddLeave = () => {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
+        credentials: 'include',
       });
 
       console.log(response.data);

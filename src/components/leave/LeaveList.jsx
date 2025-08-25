@@ -20,6 +20,7 @@ const LeaveList = () => {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
+          credentials: 'include',
         }
       );
       if (response.data.success) {

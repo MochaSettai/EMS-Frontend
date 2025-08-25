@@ -21,6 +21,7 @@ const EditDepartment = () => {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
+            credentials: 'include',
           }
         );
         console.log(response.data);
@@ -58,6 +59,7 @@ const EditDepartment = () => {
           headers: {
             Authorization: `Bearer ${token}`,
           },
+          credentials: 'include',
         }
       );
       // console.log(response)

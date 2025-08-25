@@ -45,6 +45,7 @@ const AddEmployee = () => {
           headers: {
             Authorization: `Bearer ${token}`,
           },
+          credentials: 'include',
         }
       );
 
