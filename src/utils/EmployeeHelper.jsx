@@ -2,9 +2,11 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 export const fetchDepartments = async () => {
+    const API_URL = process.env.REACT_APP_API_URL;
+
     let departments;
   try {
-    const response = await axios.get("http://localhost:5000/api/department", {
+    const response = await axios.get(`${API_URL}/api/department`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
@@ -24,9 +26,11 @@ export const fetchDepartments = async () => {
 
 // Employees for Salary form
 export const fetchEmployees = async (route, id) => {
+    const API_URL = process.env.REACT_APP_API_URL;
+    
     let employees;
   try {
-    const response = await axios.get(`http://localhost:5000/api/employee/${route}/${id}`, {
+    const response = await axios.get(`${API_URL}/api/employee/${route}/${id}`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },

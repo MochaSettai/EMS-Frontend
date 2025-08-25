@@ -18,6 +18,8 @@ export const columns = [
 ];
 
 export const DepartmentButtons = ({ _id, onDepartmentDelete, render }) => {
+  const API_URL = process.env.REACT_APP_API_URL;
+
   const navigate = useNavigate();
 
   const handleDelete = async () => {
@@ -25,7 +27,7 @@ export const DepartmentButtons = ({ _id, onDepartmentDelete, render }) => {
     if (confirm) {
       try {
         const response = await axios.delete(
-          `http://localhost:5000/api/department/delete/${_id}`,
+          `${API_URL}/api/department/delete/${_id}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,

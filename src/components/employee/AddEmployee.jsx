@@ -4,6 +4,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const AddEmployee = () => {
+  const API_URL = process.env.REACT_APP_API_URL;
+
   const [departments, setDepartments] = useState([]);
   const [formData, setFormData] = useState({});
   const navigate = useNavigate()
@@ -37,7 +39,7 @@ const AddEmployee = () => {
       const token = localStorage.getItem("token");
 
       const response = await axios.post(
-        "http://localhost:5000/api/employee/add",
+        `${API_URL}/api/employee/add`,
         formDataObj,
         {
           headers: {

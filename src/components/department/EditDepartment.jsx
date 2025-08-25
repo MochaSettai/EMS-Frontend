@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 const EditDepartment = () => {
+  const API_URL = process.env.REACT_APP_API_URL;
+
   const { id } = useParams();
   const [department, setDepartment] = useState([]);
   const [depLoading, setDepLoading] = useState(false);
@@ -14,7 +16,7 @@ const EditDepartment = () => {
       setDepLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/department/${id}`,
+          `${API_URL}/api/department/${id}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -50,7 +52,7 @@ const EditDepartment = () => {
       const token = localStorage.getItem("token");
 
       const response = await axios.put(
-        `http://localhost:5000/api/department/edit/${id}`,
+        `${API_URL}/api/department/edit/${id}`,
         department,
         {
           headers: {

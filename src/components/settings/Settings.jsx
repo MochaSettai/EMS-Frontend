@@ -5,6 +5,8 @@ import { useAuth } from "../../context/authContext";
 import axios from "axios";
 
 const Settings = () => {
+  const API_URL = process.env.REACT_APP_API_URL;
+
   const navigate = useNavigate();
   const { user } = useAuth();
   const [settings, setSettings] = useState({
@@ -29,7 +31,7 @@ const Settings = () => {
         console.log(settings)
 
         const response = await axios.put(
-          "http://localhost:5000/api/settings/change-password",
+          `${API_URL}/api/settings/change-password`,
           settings,
           {
             headers: {
