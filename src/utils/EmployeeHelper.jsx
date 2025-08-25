@@ -2,7 +2,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 export const fetchDepartments = async () => {
-    const API_URL = process.env.REACT_APP_API_URL;
+  const API_URL = import.meta.env.VITE_API_URL;
 
     let departments;
   try {
@@ -26,7 +26,7 @@ export const fetchDepartments = async () => {
 
 // Employees for Salary form
 export const fetchEmployees = async (route, id) => {
-    const API_URL = process.env.REACT_APP_API_URL;
+  const API_URL = import.meta.env.VITE_API_URL;
     
     let employees;
   try {

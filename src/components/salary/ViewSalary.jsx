@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 
 const ViewSalary = () => {
-  const API_URL = process.env.REACT_APP_API_URL;
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const [salaries, setSalaries] = useState(null);
   const [filteredSalaries, setFilteredSalaries] = useState(null);

@@ -5,7 +5,7 @@ import axios from 'axios';
 import { useAuth } from '../../context/authContext';
 
 const LeaveList = () => {
-  const API_URL = process.env.REACT_APP_API_URL;
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const {user} = useAuth();
   const {id} = useParams();
