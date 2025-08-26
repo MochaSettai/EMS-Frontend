@@ -64,7 +64,8 @@ const EditEmployee = () => {
     const { name, value } = e.target;
     setEmployee((prevData) => ({ ...prevData, [name]: value }));
   };
-
+ 
+  // submit comment
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
