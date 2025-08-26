@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const AddLeave = () => {
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const { user } = useAuth();
 
   const [leave, setLeave] = useState({
@@ -20,7 +22,7 @@ const AddLeave = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/api/leave/add", leave, {
+      const response = await axios.post(`${API_URL}/api/leave/add`, leave, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

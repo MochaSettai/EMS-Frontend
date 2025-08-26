@@ -4,12 +4,14 @@ import { FaBuilding, FaCheckCircle, FaFileAlt, FaHourglassHalf, FaMoneyBillWave,
 import axios from 'axios';
 
 const AdminSummary = () => {
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const [summary, setSummary] = useState(null);
 
   useEffect(() => {
     const fetchSummary = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/dashboard/summary', {
+        const response = await axios.get(`${API_URL}/api/dashboard/summary`, {
           headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
           },

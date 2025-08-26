@@ -5,6 +5,8 @@ import { columns, DepartmentButtons } from "../../utils/DepartmentHelper";
 import axios from "axios";
 
 const DepartmentList = () => {
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const [departments, setDepartments] = useState([]);
   const [depLoading, setDepLoading] = useState(false);
   const [filteredDepartments, setFilteredDepartments] = useState([]);
@@ -21,7 +23,7 @@ const DepartmentList = () => {
       setDepLoading(true);
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/department",
+          `${API_URL}/api/department`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,

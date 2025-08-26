@@ -5,6 +5,8 @@ import { columns, EmployeeButtons } from "../../utils/EmployeeHelper";
 import axios from "axios";
 
 const EmployeeList = () => {
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const [employees, setEmployees] = useState([]);
   const [empLoading, setEmpLoading] = useState(false);
   const [filteredEmployees, setFilteredEmployees] = useState([]);
@@ -15,7 +17,7 @@ const EmployeeList = () => {
       setEmpLoading(true);
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/employee",
+          `${API_URL}/api/employee`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -31,7 +33,7 @@ const EmployeeList = () => {
             dep_name: emp.department.dep_name,
             name: emp.userId.name,
             dob: new Date(emp.dob).toLocaleDateString(),
-            profileImage: <img width={40} className="rounded-full aspect-square object-cover" src={`http://localhost:5000/${emp.userId.profileImage}`} />,
+            profileImage: <img width={40} className="rounded-full aspect-square object-cover" src={`${API_URL}/${emp.userId.profileImage}`} />,
             action: (<EmployeeButtons _id={emp._id} />),
           }));
           setEmployees(data);

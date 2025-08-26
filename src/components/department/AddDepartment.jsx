@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const AddDepartment = () => {
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const [department, setDepartment] = useState({
     dep_name: "",
     description: "",
@@ -19,7 +21,7 @@ const AddDepartment = () => {
     try {
       const token = localStorage.getItem('token')
 
-      const response = await axios.post('http://localhost:5000/api/department/add', department, {
+      const response = await axios.post(`${API_URL}/api/department/add`, department, {
         headers: {
           "Authorization" : `Bearer ${token}`
         }

@@ -5,6 +5,8 @@ import axios from 'axios';
 import { useAuth } from '../../context/authContext';
 
 const LeaveList = () => {
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const {user} = useAuth();
   const {id} = useParams();
   const [leaves, setLeaves] = useState([]);
@@ -13,7 +15,7 @@ const LeaveList = () => {
   const fetchLeaves = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/leave/${id}`,
+        `${API_URL}/api/leave/${id}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

@@ -4,6 +4,8 @@ import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 
 const EditEmployee = () => {
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const { id } = useParams();
   const [departments, setDepartments] = useState(null);
   const [employee, setEmployee] = useState({
@@ -27,7 +29,7 @@ const EditEmployee = () => {
     const fetchEmployee = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/employee/${id}`,
+          `${API_URL}/api/employee/${id}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -68,7 +70,7 @@ const EditEmployee = () => {
       const token = localStorage.getItem("token");
 
       const response = await axios.put(
-        `http://localhost:5000/api/employee/edit/${id}`,
+        `${API_URL}/api/employee/edit/${id}`,
         employee,
         {
           headers: {
