@@ -24,8 +24,7 @@ const AddDepartment = () => {
       const response = await axios.post(`${API_URL}/api/department/add`, department, {
         headers: {
           "Authorization" : `Bearer ${token}`
-        },
-        credentials: 'include'
+        }
       });
       
       // console.log(response)

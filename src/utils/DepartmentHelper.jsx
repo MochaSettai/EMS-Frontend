@@ -31,8 +31,7 @@ export const DepartmentButtons = ({ _id, onDepartmentDelete, render }) => {
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
-            },
-            credentials: 'include',
+            }
           }
         );
         if (response.data.success) {

@@ -37,7 +37,6 @@ const Settings = () => {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
-            credentials: 'include',
           }
         );
 

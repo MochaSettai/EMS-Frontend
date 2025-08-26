@@ -13,9 +13,8 @@ const AdminSummary = () => {
       try {
         const response = await axios.get(`${API_URL}/api/dashboard/summary`, {
           headers: {
-              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
-          credentials: 'include',
         })
         if(response.data.success){
           setSummary(response.data)

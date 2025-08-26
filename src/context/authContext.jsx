@@ -18,8 +18,7 @@ const AuthContext = ({children}) => {
                     const response = await axios.get(`${API_URL}/api/auth/verify`, {
                         headers: {
                             "Authorization": `Bearer ${token}`
-                        },
-                        credentials: 'include'
+                        }
                     })
                     // console.log(response)
                     
