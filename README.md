@@ -1,7 +1,6 @@
-# 🚀 Project Name
+# Employee Management App
 
-A short, punchy tagline for your project.  
-_Example:_ “An elegant task management app built with React and Firebase.”
+A user management app built with React.
 
 ---
 
@@ -17,20 +16,12 @@ Here’s a preview of what the project looks like:
 
 ---
 
-## ✨ Features
-
-- ✅ Feature 1 — what it does
-- ⚡ Feature 2 — what makes it unique
-- 🔒 Feature 3 — what problem it solves
-
----
-
 ## 🧰 Tech Stack
 
 **Frontend:** React, Tailwind CSS  
 **Backend:** Node.js, Express  
 **Database:** MongoDB  
-**Deployment:** Vercel / Render / Netlify
+**Deployment:** Vercel
 
 ---
 
