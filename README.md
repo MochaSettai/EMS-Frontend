@@ -12,8 +12,6 @@ Here’s a preview of what the project looks like:
 |:-------------:|:-------------:|:-------------:|:-------------:|
 | ![Login Page](screenshots/Log-In.png) | ![Dashboard](screenshots/Dashboard.png) | ![Employee](screenshots/Employee.png) | ![Employee List](screenshots/Employee-List.png) |
 
-> 💡 Tip: Store your screenshots in a folder like `/assets/screenshots/` and update the image paths above.
-
 ---
 
 ## 🧰 Tech Stack
@@ -22,15 +20,3 @@ Here’s a preview of what the project looks like:
 **Backend:** Node.js, Express  
 **Database:** MongoDB  
 **Deployment:** Vercel
-
----
-
-## 🚀 Getting Started
-
-Clone the repository and install dependencies:
-
-```bash
-git clone https://github.com/yourusername/your-repo-name.git
-cd your-repo-name
-npm install
-npm run dev
