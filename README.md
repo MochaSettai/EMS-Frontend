@@ -20,3 +20,9 @@ Here’s a preview of what the project looks like:
 **Backend:** Node.js, Express  
 **Database:** MongoDB  
 **Deployment:** Vercel
+
+## 🔑 Demo Login Details
+
+To explore the app, you can use the following demo credentials:
+email: admin@gmail.com
+password: admin
