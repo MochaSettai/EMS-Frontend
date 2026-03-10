@@ -25,6 +25,6 @@ Here’s a preview of what the project looks like:
 
 To explore the app, you can use the following demo credentials:
 
-Email: admin@gmail.com
+Email: test@gmail.com
 
-Password: admin
+Password: test
