@@ -28,3 +28,5 @@ To explore the app, you can use the following demo credentials:
 Email: test@gmail.com
 
 Password: test
+
+(I'm using a free hosting service so please give it a minute when logging in to an account)
